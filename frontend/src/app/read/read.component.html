@@ -1,0 +1,36 @@
+<div class="container">
+    <table class="table">
+        <thead class="text-center">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Address</th>
+            <th scope="col">City</th>
+            <th scope="col">Pin Code</th>
+            <th scope="col">Country</th>
+            <th scope="col">Actions</th>
+
+
+          </tr>
+        </thead>
+        <tbody class="table-group-divider text-center">
+          <tr  *ngFor ='let us of readData'>
+            <th scope="row">{{us.id}}</th>
+            <td>{{us.name}}</td>
+            <td>{{us.address}}</td>
+            <td>{{us.city}}</td>
+            <td>{{us.pc}}</td>
+            <td>{{us.country}}</td>
+            <td>
+              <a [routerLink] = "['/create',us.id]" class="btn btn-sm btn-primary m-2">Update</a>
+              <button class="btn btn-sm btn-danger"(click)="deleteID(us.id)">Delete</button>
+
+
+            </td>
+
+
+          </tr>
+        
+        </tbody>
+      </table>
+</div>

@@ -1,0 +1,32 @@
+<div class="container my-5">
+    
+    <form [formGroup]="userForm" (ngSubmit)="userSubmit()">
+        <div class="col-lg-4 mt-2">
+            <input type="text"  class="form-control" formControlName="name" placeholder="Enter Name..">
+
+        </div>
+        <div class="col-lg-4 mt-2">
+            <input type="text" class="form-control" formControlName="address" placeholder="Enter Address..">
+
+        </div>
+        <div class="col-lg-4 mt-2">
+            <input type="text"  class="form-control"formControlName="city" placeholder="Enter district..">
+
+        </div>
+        <div class="col-lg-4 mt-2">
+            <input type="text"  class="form-control" formControlName="pc"placeholder="Enter Pincode..">
+
+        </div>
+        <div class="col-lg-4 mt-2">
+            <input type="text"  class="form-control"formControlName="country" placeholder="Enter Country..">
+
+        </div>
+        <div class ="col-lg-4 mt-2" *ngIf="!getparamid" (click)="userSubmit()">
+            <button class="btn btn-primary btn-sm m-4 text-center">Add </button>
+        </div>
+
+        <div class ="col-lg-4 mt-2" *ngIf="getparamid" (click)="userUpdate()">
+            <button class="btn btn-primary btn-sm m-4">Update </button>
+        </div>
+    </form>
+</div>
